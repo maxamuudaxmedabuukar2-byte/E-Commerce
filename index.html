@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<header class="bg-blue-700 text-white text-center p-6">
+  <h1 class="text-3xl font-bold">E-Commerce System</h1>
+  <p class="mt-2">Product Display</p>
+</header>
+
+<!-- PRODUCTS -->
+<section class="container mx-auto p-6">
+  <h2 class="text-2xl font-semibold text-center mb-6">Products</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg p-4 text-center transform transition duration-300 hover:scale-105">
+      <img src="laptop.jpg"
+           class="mx-auto mb-4 rounded h-40 object-cover">
+      <h3 class="text-lg font-bold">Laptop</h3>
+      <p class="text-gray-600">$400</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg p-4 text-center transform transition duration-300 hover:scale-105">
+      <img src="Smart Phone.jpg"
+           class="mx-auto mb-4 rounded h-40 object-cover">
+      <h3 class="text-lg font-bold">Smart Phone</h3>
+      <p class="text-gray-600">$200</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-lg p-4 text-center transform transition duration-300 hover:scale-105">
+      <img src="headPhones.jpg"
+           class="mx-auto mb-4 rounded h-40 object-cover">
+      <h3 class="text-lg font-bold">Headphones</h3>
+      <p class="text-gray-600">$10</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="bg-white max-w-md mx-auto p-6 shadow-lg rounded-lg">
+  <h2 class="text-xl font-semibold text-center mb-4">Order Form</h2>
+
+  <form id="orderForm" class="space-y-4">
+    <input id="name" type="text" placeholder="Full Name" class="w-full border p-2 rounded">
+    <input id="email" type="email" placeholder="Email Address" class="w-full border p-2 rounded">
+    <input id="quantity" type="number" placeholder="Quantity" class="w-full border p-2 rounded">
+
+
+    <button class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">
+      Submit Order
+    </button>
+  </form>
+
+  <p id="error" class="text-red-600 text-center mt-3 hidden"></p>
+</section>
+
+<!-- ORDER SUMMARY (DOM MANIPULATION) -->
+<section class="container mx-auto p-6">
+  <h2 class="text-xl font-semibold text-center mb-4">Order Summary</h2>
+  <div id="orderSummary" class="text-center text-gray-700">
+    No orders yet.
+  </div>
+</section>
+
+<footer class="bg-gray-800 text-white text-center p-10">
+  &copy; 2026 E-Commerce All Rights Reserved. 
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
